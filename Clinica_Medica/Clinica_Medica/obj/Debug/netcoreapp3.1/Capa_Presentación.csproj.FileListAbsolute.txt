@@ -75,3 +75,4 @@ C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Clinica_Me
 C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Clinica_Medica\obj\Debug\netcoreapp3.1\Capa_Presentación.dll
 C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Clinica_Medica\obj\Debug\netcoreapp3.1\Capa_Presentación.pdb
 C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Clinica_Medica\obj\Debug\netcoreapp3.1\Capa_Presentación.genruntimeconfig.cache
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Clinica_Medica\obj\Debug\netcoreapp3.1\Capa_Presentación.FrmBuscarHistorial.resources

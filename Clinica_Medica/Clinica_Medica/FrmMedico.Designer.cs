@@ -31,6 +31,13 @@ namespace Capa_Presentación
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMedico));
             this.grdMedico = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -48,12 +55,8 @@ namespace Capa_Presentación
             this.lblNombre = new System.Windows.Forms.Label();
             this.cmbEspecialidad = new System.Windows.Forms.ComboBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdMedico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,26 +73,82 @@ namespace Capa_Presentación
             this.apellido,
             this.telefono,
             this.especialidad,
-            this.email});
+            this.email,
+            this.fecha_nac});
             this.grdMedico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.grdMedico.Location = new System.Drawing.Point(12, 212);
+            this.grdMedico.Location = new System.Drawing.Point(12, 238);
             this.grdMedico.Name = "grdMedico";
             this.grdMedico.RowHeadersWidth = 51;
             this.grdMedico.RowTemplate.Height = 29;
             this.grdMedico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdMedico.Size = new System.Drawing.Size(709, 174);
+            this.grdMedico.Size = new System.Drawing.Size(836, 174);
             this.grdMedico.TabIndex = 53;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "ID_MEDICO";
+            this.codigo.HeaderText = "Código";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "NOMBRE";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 115;
+            // 
+            // apellido
+            // 
+            this.apellido.DataPropertyName = "APELLIDO";
+            this.apellido.HeaderText = "Apellidos";
+            this.apellido.MinimumWidth = 6;
+            this.apellido.Name = "apellido";
+            this.apellido.Width = 115;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "TELEFONO";
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.MinimumWidth = 6;
+            this.telefono.Name = "telefono";
+            this.telefono.Width = 95;
+            // 
+            // especialidad
+            // 
+            this.especialidad.DataPropertyName = "ESPECIALIDAD";
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.MinimumWidth = 6;
+            this.especialidad.Name = "especialidad";
+            this.especialidad.Width = 105;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "EMAIL";
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 125;
+            // 
+            // fecha_nac
+            // 
+            this.fecha_nac.HeaderText = "Fecha Nacimiento";
+            this.fecha_nac.MinimumWidth = 6;
+            this.fecha_nac.Name = "fecha_nac";
+            this.fecha_nac.Width = 125;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(318, 65);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(403, 27);
+            this.txtEmail.Size = new System.Drawing.Size(461, 27);
             this.txtEmail.TabIndex = 52;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(76, 65);
+            this.txtTelefono.Location = new System.Drawing.Point(85, 65);
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(125, 27);
@@ -97,24 +156,24 @@ namespace Capa_Presentación
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(576, 12);
+            this.txtApellidos.Location = new System.Drawing.Point(619, 12);
             this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(145, 27);
+            this.txtApellidos.Size = new System.Drawing.Size(160, 27);
             this.txtApellidos.TabIndex = 49;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(318, 12);
+            this.txtNombre.Location = new System.Drawing.Point(332, 12);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(139, 27);
+            this.txtNombre.Size = new System.Drawing.Size(160, 27);
             this.txtNombre.TabIndex = 48;
             // 
             // txtMedico
             // 
             this.txtMedico.BackColor = System.Drawing.SystemColors.Control;
-            this.txtMedico.Location = new System.Drawing.Point(76, 12);
+            this.txtMedico.Location = new System.Drawing.Point(85, 12);
             this.txtMedico.Name = "txtMedico";
             this.txtMedico.ReadOnly = true;
             this.txtMedico.Size = new System.Drawing.Size(125, 27);
@@ -123,7 +182,7 @@ namespace Capa_Presentación
             // btnSalir
             // 
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(608, 403);
+            this.btnSalir.Location = new System.Drawing.Point(730, 452);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 88);
             this.btnSalir.TabIndex = 46;
@@ -134,40 +193,43 @@ namespace Capa_Presentación
             // btnEliminar
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(470, 403);
+            this.btnEliminar.Location = new System.Drawing.Point(557, 452);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 88);
             this.btnEliminar.TabIndex = 45;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(315, 403);
+            this.btnGuardar.Location = new System.Drawing.Point(381, 452);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(100, 88);
             this.btnGuardar.TabIndex = 44;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(167, 403);
+            this.btnNuevo.Location = new System.Drawing.Point(200, 452);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 88);
             this.btnNuevo.TabIndex = 43;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(24, 403);
+            this.btnBuscar.Location = new System.Drawing.Point(40, 452);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 88);
             this.btnBuscar.TabIndex = 42;
@@ -178,7 +240,7 @@ namespace Capa_Presentación
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(498, 19);
+            this.lblApellido.Location = new System.Drawing.Point(530, 15);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(72, 20);
             this.lblApellido.TabIndex = 41;
@@ -223,74 +285,45 @@ namespace Capa_Presentación
             // cmbEspecialidad
             // 
             this.cmbEspecialidad.FormattingEnabled = true;
-            this.cmbEspecialidad.Location = new System.Drawing.Point(132, 139);
+            this.cmbEspecialidad.Location = new System.Drawing.Point(118, 168);
             this.cmbEspecialidad.Name = "cmbEspecialidad";
-            this.cmbEspecialidad.Size = new System.Drawing.Size(299, 28);
+            this.cmbEspecialidad.Size = new System.Drawing.Size(452, 28);
             this.cmbEspecialidad.TabIndex = 55;
             // 
             // lblEspecialidad
             // 
             this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Location = new System.Drawing.Point(12, 147);
+            this.lblEspecialidad.Location = new System.Drawing.Point(12, 176);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(93, 20);
             this.lblEspecialidad.TabIndex = 54;
             this.lblEspecialidad.Text = "Especialidad";
             // 
-            // codigo
+            // dtpFechaNacimiento
             // 
-            this.codigo.DataPropertyName = "ID_MEDICO";
-            this.codigo.HeaderText = "Código";
-            this.codigo.MinimumWidth = 6;
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 125;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(149, 120);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(250, 27);
+            this.dtpFechaNacimiento.TabIndex = 75;
             // 
-            // nombre
+            // label5
             // 
-            this.nombre.DataPropertyName = "NOMBRE";
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 115;
-            // 
-            // apellido
-            // 
-            this.apellido.DataPropertyName = "APELLIDO";
-            this.apellido.HeaderText = "Apellidos";
-            this.apellido.MinimumWidth = 6;
-            this.apellido.Name = "apellido";
-            this.apellido.Width = 115;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "TELEFONO";
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.MinimumWidth = 6;
-            this.telefono.Name = "telefono";
-            this.telefono.Width = 105;
-            // 
-            // especialidad
-            // 
-            this.especialidad.DataPropertyName = "ESPECIALIDAD";
-            this.especialidad.HeaderText = "Especialidad";
-            this.especialidad.MinimumWidth = 6;
-            this.especialidad.Name = "especialidad";
-            this.especialidad.Width = 105;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "EMAIL";
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 125;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 20);
+            this.label5.TabIndex = 74;
+            this.label5.Text = "Fecha Nacimiento";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FrmMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(746, 524);
+            this.ClientSize = new System.Drawing.Size(855, 563);
+            this.Controls.Add(this.dtpFechaNacimiento);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbEspecialidad);
             this.Controls.Add(this.lblEspecialidad);
             this.Controls.Add(this.grdMedico);
@@ -313,6 +346,7 @@ namespace Capa_Presentación
             this.Name = "FrmMedico";
             this.Text = "Médicos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMedico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdMedico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -339,11 +373,14 @@ namespace Capa_Presentación
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ComboBox cmbEspecialidad;
         private System.Windows.Forms.Label lblEspecialidad;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;
     }
 }

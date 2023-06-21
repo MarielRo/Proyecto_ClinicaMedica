@@ -8,3 +8,13 @@ C:\Users\marie\Desktop\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Ca
 C:\Users\marie\Desktop\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.csproj.CoreCompileInputs.cache
 C:\Users\marie\Desktop\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.dll
 C:\Users\marie\Desktop\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.pdb
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\bin\Debug\netstandard2.0\Capa_Entidades.deps.json
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\bin\Debug\netstandard2.0\Capa_Entidades.dll
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\bin\Debug\netstandard2.0\Capa_Entidades.pdb
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.csproj.AssemblyReference.cache
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.AssemblyInfoInputs.cache
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.AssemblyInfo.cs
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.csproj.CoreCompileInputs.cache
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.dll
+C:\Users\marie\Desktop\Proyecto_Individual_MarielRojas\Clinica_Medica\Capa_Entidades\obj\Debug\netstandard2.0\Capa_Entidades.pdb

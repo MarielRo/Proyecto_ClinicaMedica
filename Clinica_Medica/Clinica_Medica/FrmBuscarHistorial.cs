@@ -10,28 +10,25 @@ using Capa_LogicaNegocio;
 
 namespace Capa_Presentación
 {
-    public partial class FrmBuscarMedico : Form
+    public partial class FrmBuscarHistorial : Form
     {
-        public FrmBuscarMedico()
+        public FrmBuscarHistorial()
         {
             InitializeComponent();
         }
 
-
         public event EventHandler Aceptar;
-        int vgn_id_medico;
-
-
+        int vgn_id_historial;
 
         private void cargarListaDataSet(string condicion = "", string orden = "")
         {
-            BLMedico logica = new BLMedico(Configuracion.getConnectionString);
-            DataSet DSMedicos;
+            BLHistorial logica = new BLHistorial(Configuracion.getConnectionString);
+            DataSet DSHistorial;
             try
             {
-                DSMedicos = logica.ListarMedicos(condicion, orden);
-                grdListaMedico.DataSource = DSMedicos;
-                grdListaMedico.DataMember = DSMedicos.Tables["Medicos"].TableName;
+                DSHistorial = logica.ListarHistorial(condicion, orden);
+                grdListaHistorial.DataSource = DSHistorial;
+                grdListaHistorial.DataMember = DSHistorial.Tables["Historial"].TableName;
             }
             catch (Exception ex)
             {
@@ -39,7 +36,7 @@ namespace Capa_Presentación
             }
         }
 
-        private void FrmBuscarMedico_Load(object sender, EventArgs e)
+        private void FrmBuscarHistorial_Load(object sender, EventArgs e)
         {
             try
             {
@@ -51,7 +48,7 @@ namespace Capa_Presentación
             }
         }
 
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             string condicion = string.Empty;
             try
@@ -77,28 +74,26 @@ namespace Capa_Presentación
 
         private void Seleccionar()
         {
-            if (grdListaMedico.SelectedRows.Count > 0)
+            if (grdListaHistorial.SelectedRows.Count > 0)
             {
-                vgn_id_medico = (int)grdListaMedico.SelectedRows[0].Cells[0].Value;
+                vgn_id_historial = (int)grdListaHistorial.SelectedRows[0].Cells[0].Value;
                 // le manda id al evento Aceptar que esta en FrmClientes
-                Aceptar(vgn_id_medico, null);
+                Aceptar(vgn_id_historial, null);
                 Close();
             }
         }// fin seleccionar
 
-
-
-        private void btnAceptar_Click_1(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             Seleccionar();
         }
 
-        private void grdListaMedico_DoubleClick(object sender, EventArgs e)
+        private void grdListaHistorial_DoubleClick(object sender, EventArgs e)
         {
             Seleccionar();
         }
 
-        private void btnCancelar_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             Aceptar(-1, null);
             Close();
