@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OZkijuYh4XPAZTjFLYNYM0sxymB9wCFemuX85UqN93maW10hfpOoqDswpDLB4GYxVVCaUHaZSjWGysN5G3ERCw==",
+  "dgSpecHash": "/yqnr90mZuH3gPJAgsvLayasN86V2gSpHcwZsnz7hiTzGbo357s83GCUjmzsPD+u7i+1k9SRxZvFyuX8cHvliA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marie\\Desktop\\Proyecto_Individual_MarielRojas\\Clinica_Medica\\Capa_AccesoDatos\\Capa_AccesoDatos.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marie\\.nuget\\packages\\bootstrap\\5.3.1\\bootstrap.5.3.1.nupkg.sha512",
     "C:\\Users\\marie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\marie\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\marie\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

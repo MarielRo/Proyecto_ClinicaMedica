@@ -80,6 +80,37 @@ namespace Capa_LogicaNegocio
         }// fin de insertar
 
 
+        public int EliminarHistorial(EntidadHistorial historial)
+        {
+            int resultado;
+            DAHistorial accesoDatos = new DAHistorial(_cadenaConexion);
+            try
+            {
+                resultado = accesoDatos.EliminarHistorial(historial);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return resultado;
+        }
 
+        //llama el metodo creado en la capa de acceso el cual modifica un cliente
+        public int Modificar(EntidadMedico medico)
+        {
+            int filasAfectadas;
+            DAMedico accesoDatos = new DAMedico(_cadenaConexion);
+            try
+            {
+                filasAfectadas = accesoDatos.Modificar(medico);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return filasAfectadas;
+        }
     }
+
 }
+

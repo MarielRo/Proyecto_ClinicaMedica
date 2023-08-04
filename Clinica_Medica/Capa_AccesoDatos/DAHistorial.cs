@@ -83,8 +83,99 @@ namespace Capa_AccesoDatos
             return datos;
         }// devulve la lista con los clientes
 
+        public EntidadHistorial ObtenerHistorial(int id)
+        {
+            // devuelve un clietne cuando se busca
+            EntidadHistorial historial = null;
+            SqlConnection conexion = new SqlConnection(_cadenaConexion);
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader dataReader;
+            string sentencia = string.Format("SELECT ID_HISTORIAL,ID_PACIENTE,DIAGNOSTICOS FROM HISTORIAL_MEDICO WHERE ID_HISTORIAL = " +
+                " {0}", id);
+            // SI EL ID ES TEXTO SE ESCRIBE ENTRE COMILLAS {0} en el string
+            comando.Connection = conexion;
+            comando.CommandText = sentencia;
+            try
+            {
+                conexion.Open();
+                dataReader = comando.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    historial = new EntidadHistorial();
+                    dataReader.Read();
+                    historial.Id_historial = dataReader.GetInt32(0);
+                    historial.Id_paciente = dataReader.GetInt32(1);
+                    historial.Diagnosticos = dataReader.GetString(2);
+                    historial.Existe = true;
+                }
+                conexion.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return historial;
+        }
 
 
+        public int EliminarHistorial(EntidadHistorial historial)
+        {
+            int afectado = -1;
+            SqlConnection conexion = new SqlConnection(_cadenaConexion);
+            SqlCommand comando = new SqlCommand();
+            string sentencia = "DELETE FROM HISTORIAL_MEDICO";
+            sentencia = string.Format("{0} WHERE ID_HISTORIAL = {1}", sentencia, historial.Id_historial);
+            comando.CommandText = sentencia;
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                afectado = comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.Dispose();
+                comando.Dispose();
+            }
+            return afectado;
+
+        }
+
+        public int Modificar(EntidadHistorial historial)
+        {
+            int filasAfectadas = -1;
+            SqlConnection conexion = new SqlConnection(_cadenaConexion);
+            SqlCommand comando = new SqlCommand();
+            string sentencia = "UPDATE HISTORIAL_MEDICO SET ID_PACIENTE = @ID_PACIENTE,DIAGNOSTICOS=@DIAGNOSTICOS WHERE " +
+                "ID_HISTORIAL=@ID_HISTORIAL";
+            comando.CommandText = sentencia;
+            comando.Connection = conexion;
+            comando.Parameters.AddWithValue("@ID_HISTORIAL", historial.Id_historial);
+            comando.Parameters.AddWithValue("@ID_PACIENTE", historial.Id_paciente);
+            comando.Parameters.AddWithValue("@DIAGNOSTICOS",historial.Diagnosticos);
+            try
+            {
+                conexion.Open();
+                filasAfectadas = comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.Dispose();
+                comando.Dispose();
+            }
+            return filasAfectadas;
+
+        } // modificar
 
     }
 
